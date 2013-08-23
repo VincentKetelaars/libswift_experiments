@@ -1,10 +1,11 @@
 # Swift home
 SWIFT_HOME=/home/vincent/svn/libswift/ppsp
 LIBEVENT_HOME=/home/vincent/svn/libswift/libevent21
+export LD_LIBRARY_PATH=${SWIFT_HOME}
 
 # Flags
 CPPFLAGS+=-Wall -g -I${SWIFT_HOME} -I.
-LDFLAGS+=-L${SWIFT_HOME} #-L${LIBEVENT_HOME} -L${LIBEVENT_HOME}/.libs -levent -lstdc++
+LDFLAGS+=-L${SWIFT_HOME} -lctest -L${LIBEVENT_HOME} -L${LIBEVENT_HOME}/.libs -levent -lstdc++
 
 # Compiler
 CC=gcc
