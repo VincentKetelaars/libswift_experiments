@@ -1,0 +1,10 @@
+Make sure that the SWIFT_HOME directory has built a library.
+
+How to:
+gcc -shared -Wl,-soname,libswift.so.1 -o libswift.so.1.0 *.o
+ln -sf libswift.so.1.0 libswift.so
+ln -sf libswift.so.1.0 libswift.so.1
+
+Then remember to make sure that LD_LIBRARY_PATH contains the path to SWIFT_HOME
+One possible way is to put the SWIFT_HOME value in export_variables.sh, then run:
+. ./export_variables.sh
