@@ -1,6 +1,7 @@
 Make sure that the SWIFT_HOME directory has built a library.
 
 How to:
+gcc -fPIC -c *.cpp -I.
 gcc -shared -Wl,-soname,libswift.so.1 -o libswift.so.1.0 *.o
 ln -sf libswift.so.1.0 libswift.so
 ln -sf libswift.so.1.0 libswift.so.1

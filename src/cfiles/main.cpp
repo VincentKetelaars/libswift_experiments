@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
 	LibraryInit();
 	Address address = Address(ADDRESS_1);
 	Listen(address);
-	Open("/home/vincent/Downloads/tutorial.pdf");
+	int swarm_id = Open("/home/vincent/Downloads/tutorial.pdf");
+	fprintf(stdout,"Swarm ID: %d\n",swarm_id);
 	fprintf(stdout,"Done!\n");
 }
